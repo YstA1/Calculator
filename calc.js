@@ -18,19 +18,8 @@ function calcNumbers(operation, firstNumber, secondNumber) {
     mult: firstNumber * secondNumber,
     div: firstNumber / secondNumber,
   };
-
-  switch (operation) {
-    case "sum":
-      return operations.sum;
-    case "sub":
-      return operations.sub;
-    case "mult":
-      return operations.mult;
-    case "div":
-      return operations.div;
-    default:
-      return "Unknown operation";
-  }
+  if (!operations[operation]) return "Unknown operation"
+  else return operations[operation]
 }
 
 console.log(checkData("sum", 6, 3));
