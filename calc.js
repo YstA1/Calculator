@@ -1,31 +1,84 @@
-function checkData(operation, firstNumber, secondNumber) {
-  if (
-    !operation ||
-    !firstNumber ||
-    !secondNumber ||
-    isNaN(secondNumber) ||
-    isNaN(firstNumber)
-  )
-    return "Error";
-  let result = calcNumbers(operation, firstNumber, secondNumber);
-  return result;
+function returnFirstNumber () {
+  for (let elem of Buttons) {
+    elem.onclick = () => {
+      if (Result.innerHTML == 0)  Result.innerHTML = elem.innerHTML;
+      else Result.innerHTML += elem.innerHTML
+      firstNumber = Result.innerHTML
+    };
+  }
 }
 
-function calcNumbers(operation, firstNumber, secondNumber) {
-  let operations = {
-    sum: firstNumber + secondNumber,
-    sub: firstNumber - secondNumber,
-    mult: firstNumber * secondNumber,
-    div: firstNumber / secondNumber,
-  };
-  if (!operations[operation]) return "Unknown operation"
-  else return operations[operation]
+function returnSecondNumber () {
+  for (let elem of Buttons) {
+    elem.onclick = () => {
+      if (Result.innerHTML == 0)  Result.innerHTML = elem.innerHTML;
+      else Result.innerHTML += elem.innerHTML
+      secondNumber = Result.innerHTML
+    };
+  }
 }
 
-console.log(checkData("sum", 6, 3));
-console.log(checkData("sub", 6, 3));
-console.log(checkData("mult", 6, 3));
-console.log(checkData("div", 6, 3));
-console.log(checkData("sm", 6, 3));
-console.log(checkData("", 6, 3));
-console.log(checkData("sum", 6));
+let Sum = document.getElementById("Sum");
+let Sub = document.getElementById("Sub");
+let Mult = document.getElementById("Mult");
+let Div = document.getElementById("Div");
+let Clear = document.getElementById("Clear");
+let Delete = document.getElementById("Delete");
+let Output = document.getElementById("Output");
+let Result = document.getElementById("Result");
+let Buttons = document.getElementsByClassName("number__button");
+
+let count
+
+returnFirstNumber ()
+
+Sum.onclick = () => {
+  Result.innerHTML = 0
+  returnSecondNumber ()
+  count = "sum"
+
+};
+Sub.onclick = () => {
+  Result.innerHTML = 0
+  returnSecondNumber ()
+  count = "sub"
+};
+Mult.onclick = () => {
+  Result.innerHTML = 0
+  returnSecondNumber ()
+  count = "mult"
+};
+Div.onclick = () => {
+  Result.innerHTML = 0
+  returnSecondNumber ()
+  count = "div"
+};
+
+
+Output.onclick = () => {
+  console.log(firstNumber) ;
+  console.log(secondNumber) ;
+  switch (count) {
+    case "sub" : return Result.innerHTML = firstNumber - secondNumber
+    case "sum" : return Result.innerHTML = +(firstNumber) + +(secondNumber)
+    case "mult" : return Result.innerHTML = firstNumber * secondNumber
+    case "div" : return Result.innerHTML = parseFloat(firstNumber / secondNumber).toFixed(4)
+  }
+};
+
+Clear.onclick = () => {
+  Result.innerHTML = 0
+  firstNumber = 0
+  secondNumber = 0
+  returnFirstNumber()
+};
+
+Delete.onclick = () => {
+  Result.innerHTML = Result.innerHTML.slice(0, -1)
+  if (Result.innerHTML == 0) Result.innerHTML = 0;
+};
+
+
+
+
+

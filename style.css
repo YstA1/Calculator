@@ -1,0 +1,239 @@
+/* Шрифты */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap");
+
+/* Обнуление */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  font-style: Roboto;
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 22px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.calculator {
+  border-radius: 20px;
+  width: 364px;
+  height: 582px;
+  margin: 50% auto;
+  background-color: #17171c;
+  overflow: hidden;
+}
+.container {
+  width: 324px;
+  height: 599px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: -42px;
+  margin-bottom: 25px;
+}
+.calculator__result {
+  margin: 0 auto;
+  padding-top: 63px;
+  font-family: "Work Sans";
+  font-weight: 300;
+  font-size: 96px;
+  line-height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  color: #ffffff;
+}
+.calculator__row {
+  width: 324.33px;
+  height: 72px;
+  margin-top: 16px;
+  display: flex;
+}
+
+.delete-all__button {
+  margin-right: 16px;
+  font-family: "Work Sans";
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  width: 153px;
+  height: 72px;
+  border-radius: 24px;
+  background-color: #4e505f;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: ease-in-out 0.3s;
+}
+
+.delete-all__button:hover {
+  background-color: rgb(255, 61, 61);
+}
+
+.delete-all__button:focus {
+  transform: scale(0.85, 0.85);
+}
+
+.delete-symbol__button {
+  margin-right: 16px;
+  font-family: "Work Sans";
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  width: 69px;
+  height: 72px;
+  border-radius: 24px;
+  background-color: #2e2f38;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  transition: ease-in-out 0.3s;
+}
+.delete-symbol__button:hover {
+  background-color: rgb(221, 85, 51);
+}
+
+.delete-symbol__button:focus {
+  transform: scale(0.85, 0.85);
+}
+
+.number__button {
+  margin-right: 16px;
+  font-family: "Work Sans";
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  width: 69px;
+  height: 72px;
+  border-radius: 24px;
+  background-color: #2e2f38;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  transition: ease-in-out 0.3s;
+
+}
+.number__button:hover {
+  background-color: rgb(255, 255, 255);
+  color: #17171c;
+  
+}
+
+.number__button:focus {
+  transform: scale(0.85, 0.85);
+}
+
+.operation__button {
+  font-family: "Work Sans";
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  width: 69px;
+  height: 72px;
+  border-radius: 24px;
+  background-color: #4b5efc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  transition: ease-in-out 0.3s;
+}
+
+.operation__button:hover{
+  background-color: #a787e4;
+}
+
+.operation__button:focus {
+  transform: scale(0.85, 0.85);
+}
+
+.large {
+  margin-right: 16px;
+  font-family: "Work Sans";
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  width: 238.33px;
+  height: 72px;
+  background-color: #2e2f38;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  transition: ease-in-out 0.3s;
+}
+.large:hover {
+  background-color: rgb(255, 255, 255);
+  color: #17171c;
+}
