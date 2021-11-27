@@ -62,7 +62,7 @@ Output.onclick = () => {
     case "sub" : return Result.innerHTML = firstNumber - secondNumber
     case "sum" : return Result.innerHTML = +(firstNumber) + +(secondNumber)
     case "mult" : return Result.innerHTML = firstNumber * secondNumber
-    case "div" : return Result.innerHTML = parseFloat(firstNumber / secondNumber).toFixed(4)
+    case "div" : return Result.innerHTML = (firstNumber / secondNumber).toFixed(2)
   }
 };
 
