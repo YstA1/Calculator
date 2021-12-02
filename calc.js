@@ -1,84 +1,93 @@
-function returnFirstNumber () {
+let firstNumber = 0;
+let secondNumber = 0;
+let count = null;
+
+function returnFirstNumber() {
   for (let elem of Buttons) {
     elem.onclick = () => {
-      if (Result.innerHTML == 0)  Result.innerHTML = elem.innerHTML;
-      else Result.innerHTML += elem.innerHTML
-      firstNumber = Result.innerHTML
+      if (Result.innerHTML == 0) Result.innerHTML = elem.innerHTML;
+      else Result.innerHTML += elem.innerHTML;
+      firstNumber = Result.innerHTML;
     };
   }
 }
 
-function returnSecondNumber () {
+function returnSecondNumber() {
   for (let elem of Buttons) {
     elem.onclick = () => {
-      if (Result.innerHTML == 0)  Result.innerHTML = elem.innerHTML;
-      else Result.innerHTML += elem.innerHTML
-      secondNumber = Result.innerHTML
+      if (Result.innerHTML == 0) Result.innerHTML = elem.innerHTML;
+      else Result.innerHTML += elem.innerHTML;
+      secondNumber = Result.innerHTML;
     };
   }
 }
 
-let Sum = document.getElementById("Sum");
-let Sub = document.getElementById("Sub");
-let Mult = document.getElementById("Mult");
-let Div = document.getElementById("Div");
-let Clear = document.getElementById("Clear");
-let Delete = document.getElementById("Delete");
-let Output = document.getElementById("Output");
-let Result = document.getElementById("Result");
-let Buttons = document.getElementsByClassName("number__button");
+import {
+  Sum,
+  Sub,
+  Mult,
+  Div,
+  Clear,
+  Delete,
+  Output,
+  Result,
+  Buttons,
+} from "/view.js";
 
-let count
-
-returnFirstNumber ()
+returnFirstNumber();
 
 Sum.onclick = () => {
-  Result.innerHTML = 0
-  returnSecondNumber ()
-  count = "sum"
-
+  Result.innerHTML = 0;
+  returnSecondNumber();
+  count = "sum";
+  console.log(firstNumber);
 };
 Sub.onclick = () => {
-  Result.innerHTML = 0
-  returnSecondNumber ()
-  count = "sub"
+  Result.innerHTML = 0;
+  returnSecondNumber();
+  count = "sub";
 };
 Mult.onclick = () => {
-  Result.innerHTML = 0
-  returnSecondNumber ()
-  count = "mult"
+  Result.innerHTML = 0;
+  returnSecondNumber();
+  count = "mult";
 };
 Div.onclick = () => {
-  Result.innerHTML = 0
-  returnSecondNumber ()
-  count = "div"
-};
-
-
-Output.onclick = () => {
-  console.log(firstNumber) ;
-  console.log(secondNumber) ;
-  switch (count) {
-    case "sub" : return Result.innerHTML = firstNumber - secondNumber
-    case "sum" : return Result.innerHTML = +(firstNumber) + +(secondNumber)
-    case "mult" : return Result.innerHTML = firstNumber * secondNumber
-    case "div" : return Result.innerHTML = (firstNumber / secondNumber).toFixed(2)
-  }
+  Result.innerHTML = 0;
+  returnSecondNumber();
+  count = "div";
 };
 
 Clear.onclick = () => {
-  Result.innerHTML = 0
-  firstNumber = 0
-  secondNumber = 0
-  returnFirstNumber()
+  Result.innerHTML = 0;
+  firstNumber = 0;
+  secondNumber = 0;
+  returnFirstNumber();
 };
 
 Delete.onclick = () => {
-  Result.innerHTML = Result.innerHTML.slice(0, -1)
+  Result.innerHTML = Result.innerHTML.slice(0, -1);
   if (Result.innerHTML == 0) Result.innerHTML = 0;
+  if (Result.innerHTML === firstNumber.toString().slice(0, -1) && !secondNumber)
+    firstNumber = Result.innerHTML;
+  if (Result.innerHTML === secondNumber.toString().slice(0, -1))
+    secondNumber = Result.innerHTML;
 };
 
-
-
-
-
+Output.onclick = () => {
+  console.log(firstNumber);
+  console.log(secondNumber);
+  switch (count) {
+    case "sub": return (Result.innerHTML = firstNumber - secondNumber);
+      
+    case "sum": return (Result.innerHTML = +firstNumber + +secondNumber);
+      
+    case "mult": return (Result.innerHTML = firstNumber * secondNumber);
+     
+    case "div":
+      Result.innerHTML = firstNumber / secondNumber;
+      if (Result.innerHTML.length > 4) Result.innerHTML = Result.innerHTML.toString().slice(0, 5)
+      if (Result.innerHTML.toString().slice(-1) === ".") Result.innerHTML = Result.innerHTML.toString().slice(0, -1)
+      else Result.innerHTML;
+  }
+};

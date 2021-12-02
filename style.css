@@ -134,7 +134,7 @@ h6 {
   transition: ease-in-out 0.3s;
 }
 
-.delete-all__button:hover:focus {
+.delete-all__button:hover {
   background-color: rgb(255, 61, 61);
   transform: scale(0.85, 0.85);
 }
@@ -155,7 +155,7 @@ h6 {
   color: #ffffff;
   transition: ease-in-out 0.3s;
 }
-.delete-symbol__button:hover:focus {
+.delete-symbol__button:hover {
   background-color: rgb(221, 85, 51);
   transform: scale(0.85, 0.85);
 }
@@ -176,7 +176,7 @@ h6 {
   color: #ffffff;
   transition: ease-in-out 0.3s;
 }
-.number__button:hover:focus {
+.number__button:hover {
   background-color: rgb(255, 255, 255);
   color: #17171c;
   transform: scale(0.85, 0.85);
@@ -198,7 +198,7 @@ h6 {
   transition: ease-in-out 0.3s;
 }
 
-.operation__button:hover:focus {
+.operation__button:hover {
   background-color: #a787e4;
   transform: scale(0.85, 0.85);
 }
