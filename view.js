@@ -1,4 +1,3 @@
-
 export let Sum = document.getElementById("Sum");
 export let Sub = document.getElementById("Sub");
 export let Mult = document.getElementById("Mult");

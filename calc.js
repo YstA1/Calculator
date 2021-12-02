@@ -32,7 +32,7 @@ import {
   Output,
   Result,
   Buttons,
-} from "/view.js";
+} from "./view.js";
 
 returnFirstNumber();
 
