@@ -1,1 +1,1 @@
-# https://ysta1.github.io/JS-Calculator/
+# https://ysta1.github.io/Calculator/
