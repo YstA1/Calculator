@@ -1,1 +1,1 @@
-# [>Calculator<](https://ysta1.github.io/Calculator-App/)
+# [Calculator](https://ysta1.github.io/Calculator-App/)
